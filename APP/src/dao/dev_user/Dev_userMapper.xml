@@ -1,0 +1,7 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd ">
+<mapper namespace="dao.dev_user.Dev_userMapper">
+	<select id="getLoginUser" resultType="pojo.Dev_user" parameterType="string">
+		SELECT * FROM dev_user WHERE devCode=#{devCode} AND devPassword=#{pwd}
+	</select>
+</mapper>
